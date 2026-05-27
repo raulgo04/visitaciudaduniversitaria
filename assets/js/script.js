@@ -60,7 +60,7 @@ const slidesData = [
   {
     type: "image-zoom-text",
     bgColor: "#7b1e2b",
-    image: "https://raw.githubusercontent.com/raulgo04/visitaciudaduniversitaria/refs/heads/main/hispanidad.JPG",
+    image: "https://raw.githubusercontent.com/raulgo04/visitaciudaduniversitaria/refs/heads/main/assets/img/hispanidad.JPG",
     text: "¿Qué opináis del texto?",
     instructions: "Pulsa para ampliar la imagen."
   },
