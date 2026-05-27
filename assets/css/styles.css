@@ -78,7 +78,7 @@ body {
 /* IMAGEN CENTRADA (una sola) */
 .center-image {
   max-width: 100%;
-  max-height: 55vh;
+  max-height: 45vh;
   border-radius: 16px;
   margin: 18px auto 10px; /* centrada */
   box-shadow: 0 15px 35px rgba(0,0,0,0.4);
