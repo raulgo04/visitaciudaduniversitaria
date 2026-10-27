@@ -18,7 +18,7 @@ const slidesData = [
     instructions: "Pulsa para ampliar la imagen."
   },
   
-    // 3. ALFONSO XII
+    // 3. ALFONSO XIII
   {
     type: "image-zoom-text",
     bgColor: "#7b1e2b",
@@ -56,7 +56,7 @@ const slidesData = [
     instructions: "Pulsa para ampliar la imagen."
   },
   
-  // 6. TEXTO CATÓLICO (ROJO OSCURO)
+  // 6. TEXTO
   {
     type: "image-zoom-text",
     bgColor: "#7b1e2b",
@@ -73,7 +73,20 @@ const slidesData = [
     text: "La Facultad de Medicina durante la Guerra Civil",
     instructions: "Pulsa para ampliar la imagen."
   },
-     // 8. Comparativa del Paraninfo
+
+   // 8. COMPARADOR Maquetas
+  {
+    type: "image-compare",
+    bgColor: "#1f4f34",
+    title: "Maquetas de Ciudad Universitaria",
+    before: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVEPyw9wXhKtQdgDnSTtnoi-0AvBrUTvNGQdcxZPDDffQMIguS-GdNU6iXTR8M0NZO54m70_B0r1dXc5DtDAw33Xc9aXpAVp-3L4O8rFpvMik3NxgooZbJRrsgJN_17HAhhp3C6n3Jo6M/s1600/DSC03898c.jpg",
+    after: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgEfbuRAtJYjynLg789Yp46kMiHYdoHCkiRF2MhWoxFRjxOBt-lyCzhRPyFppmVycHFAOzrgAK-wfWoz_Q7iAollinNCY_zUPCh8rjQ4X49vQSc89BwXSzV34xM0E8QWfhy6NwWbEsyb4k/s1600/DSC03872c.jpg",
+    labelBefore: "Ciu durante la Guerra Civil",
+    labelAfter: "Propuesta de reconstrucción franquista tras la Guerra Civil",
+    instructions: "Desliza para comparar ambas imágenes."
+  },
+  
+     // 9. Comparativa del Paraninfo
   {
     type: "double-image-text",
     bgColor: "#0d3b4f",
@@ -84,7 +97,7 @@ const slidesData = [
     text: "Comparativa Paraninfo",
     instructions: "Pulsa para ampliar las imágenes."
   },
-    // 9. Trincheras en la Avenida Complutense
+    // 10. Trincheras en la Avenida Complutense
   {
     type: "image-zoom-text",
     bgColor: "#0d3b4f",
@@ -93,7 +106,7 @@ const slidesData = [
     instructions: "Pulsa para ampliar la imagen."
   },
   
-    // 10. ¿Cómo poner en valor este patrimonio?
+    // 11. ¿Cómo poner en valor este patrimonio?
   {
     type: "image-zoom-text",
     bgColor: "#0d3b4f",
@@ -102,7 +115,7 @@ const slidesData = [
     instructions: "Pulsa para ampliar la imagen."
   },
   
-  // 11. Albert Einstein
+  // 12. Albert Einstein
   {
     type: "image-zoom-text",
     bgColor: "#7a6220",
@@ -110,17 +123,18 @@ const slidesData = [
     text: "¿Quiénes son y qué relación tienen?",
     instructions: "Pulsa para ampliar la imagen."
   },
-  // 12. COMPARADOR (AZUL OSCURO)
+  // 13. COMPARADOR (AZUL OSCURO)
   {
     type: "image-compare",
     bgColor: "#1f4f34",
+    title: "Facultad de Filosofía y Letras",
     before: "https://memoriadelarchivo.ucm.es/omeka/files/fullsize/b5ea4ce0e56ca82aefb7c9bde0496a9f.jpg",
     after: "https://biblioaecidmadrid.wordpress.com/wp-content/uploads/2015/05/20-guerra-civil-facultad-de-filosofc3ada-y-letras-1939.jpg",
     labelBefore: "Antes de la Guerra Civil",
     labelAfter: "Después de la Guerra Civil",
     instructions: "Desliza para comparar ambas imágenes."
   },
-  // 13. ELECCIÓN ÍCONO 
+  // 14. ELECCIÓN ÍCONO 
   {
     type: "image-choice",
     bgColor: "#1f4f34",
@@ -139,7 +153,7 @@ const slidesData = [
     selected: null
   },
 
-  // 14. Libro con bala
+  // 15. Libro con bala
   {
     type: "image-text",
     bgColor: "#7b1e2b",
@@ -148,7 +162,7 @@ const slidesData = [
     instructions: "Pulsa para ampliar la imagen."
   },
 
-  // 15. Jose Ortega y Gasset
+  // 16. Jose Ortega y Gasset
   {
     type: "image-text",
     bgColor: "#7b1e2b",
@@ -157,7 +171,7 @@ const slidesData = [
     instructions: "Pulsa para ampliar la imagen."
   },
 
-  // 16. Maria Zambrano
+  // 17. Maria Zambrano
   {
     type: "image-text",
     bgColor: "#7a6220",
@@ -166,7 +180,7 @@ const slidesData = [
     instructions: "Pulsa para ampliar la imagen."
   },
   
-  // 17. Caja cerillas
+  // 18. Caja cerillas
   {
     type: "image-zoom-text",
     bgColor: "#7a6220",
@@ -175,7 +189,7 @@ const slidesData = [
     instructions: "Pulsa para ampliar la imagen."
   },
   
-    // 18. IPCE
+    // 19. IPCE
   {
     type: "image-zoom-text",
     bgColor: "#7a6220",
@@ -183,7 +197,7 @@ const slidesData = [
     text: "Instituto del Patrimonio Cultural de España",
     instructions: "Pulsa para ampliar la imagen."
   },
-       // 19. Interior y arquitectura
+       // 20. Interior y arquitectura
   {
     type: "double-image-text",
     bgColor: "#7a6220",
@@ -249,7 +263,7 @@ function renderSlide() {
 
   else if (slide.type === "image-compare") {
     inner += `
-      <h2>Facultad de Filosofía y Letras</h2>
+      <h2>${slide.title || ""}</h2>
       <p>${slide.question || ""}</p>
       <div class="image-slider-container">
         <div class="image base" style="background-image:url('${slide.after}')"></div>
