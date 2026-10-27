@@ -31,7 +31,7 @@ const slidesData = [
   {
     type: "image-zoom-text",
     bgColor: "#7b1e2b",
-    image: "https://portal.uned.es/pls/portal/docs/1/28244383.JPG",
+    image: "https://raw.githubusercontent.com/raulgo04/visitaciudaduniversitaria/refs/heads/main/assets/img/guerracivilciu.jpeg",
     text: "Guerra Civil en Ciudad Universitaria",
     instructions: "Pulsa para ampliar la imagen."
   },
